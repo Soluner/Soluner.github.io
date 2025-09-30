@@ -139,5 +139,3 @@ body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Ro
 .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 .skip-link:focus{position:fixed;left:1rem;top:1rem;width:auto;height:auto;padding:0.5rem 0.75rem;background:#04102a;color:var(--accent);border-radius:6px;z-index:9999;text-decoration:none}
 
-
-
