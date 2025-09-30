@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="Title">Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 id="tb"></h2>
+    <h3 id="cc"></h3>
+
+    <button class="main-btn" onclick="total++;c++;localStorage.setItem('clicks',total);localStorage.setItem('usable',c)">Click Me</button>
+    <p id="cps"></p>
+
+    <div class="shop">
+        <button id="Click1" onclick="buy('Click1')">Buy Mouse - $15</button>
+        <button id="Click2" onclick="buy('Click2')">Buy Mouse Wheel - $150</button>
+        <button id="Click3" onclick="buy('Click3')">Buy Hampter - $1400</button>
+        <button id="Click4" onclick="buy('Click4')">Buy Rat - $23700</button>
+        <button id="Click5" onclick="buy('Click5')">Buy Lizard - $92850</button>
+        <button id="Click6" onclick="buy('Click6')">Buy Dog - $445910</button>
+    </div>
+
+    <button class="reset-btn" onclick="reset()">Reset all</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
