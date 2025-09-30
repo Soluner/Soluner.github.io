@@ -54,8 +54,20 @@ body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Ro
     text-shadow: 0 6px 18px rgba(2,6,23,0.45);
 }
 
+/* site title link */
+.site-title{color:inherit;text-decoration:none}
+.site-title:focus{outline:3px solid rgba(96,165,250,0.16);border-radius:4px}
+
 /* supporting subtitle */
 #heading p{
+    margin:1rem 0 1.75rem;
+    font-size:clamp(1rem,2.2vw,1.125rem);
+    color:rgba(230,238,248,0.9);
+    max-width:60ch;
+    margin-left:auto;
+    margin-right:auto;
+}
+#heading a{
     margin:1rem 0 1.75rem;
     font-size:clamp(1rem,2.2vw,1.125rem);
     color:rgba(230,238,248,0.9);
@@ -93,6 +105,24 @@ body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Ro
     outline: none;
 }
 
+/* actions container */
+.actions{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-top:0.5rem}
+
+/* smaller text-style links */
+.text-link{color:var(--accent);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(96,165,250,0.12);padding-bottom:2px}
+.text-link:hover,.text-link:focus{color:#9fd3ff;border-bottom-color:rgba(96,165,250,0.28)}
+
+.social-row{margin-top:1rem;color:rgba(230,238,248,0.7)}
+.muted{opacity:0.8;margin-right:0.5rem}
+
+/* make buttons accessible */
+.cta:focus{box-shadow:0 0 0 4px rgba(96,165,250,0.12);transform:translateY(-2px)}
+
+/* responsive tweaks for actions */
+@media (max-width:520px){
+    .actions{flex-direction:column;gap:0.5rem}
+}
+
 /* subtle responsive spacing */
 @media (max-width:520px){
     #heading{padding:2rem 1rem}
@@ -104,6 +134,10 @@ body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Ro
     #heading .cta{transition:none}
     #heading::before{filter:none}
 }
+
+/* skip link for accessibility */
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:fixed;left:1rem;top:1rem;width:auto;height:auto;padding:0.5rem 0.75rem;background:#04102a;color:var(--accent);border-radius:6px;z-index:9999;text-decoration:none}
 
 
 
